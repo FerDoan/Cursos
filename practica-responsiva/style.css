@@ -1,0 +1,280 @@
+.subContaine {
+    height: 270px;
+    width: 100%;
+    border-radius: 9px;
+    font-family: "Roboto", sans-serif;
+    bottom: 0;
+    color: #fff;
+    background: rgba(90,116,148,0.09);
+    box-shadow: -10px 10px 60px 10px #ADB7C4;
+  }
+
+img {
+    margin: 0 auto;
+    height: 270px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+    border-top-left-radius: 45%;
+  }
+  
+  * {
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    width: 100%;
+    height: auto;
+    background: #FFF;
+    box-shadow: 0px 0px 40px 1px #eee;
+    display: grid;
+    justify-content: center; 
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: "mGrid card"
+                          "btn btn";
+    grid-gap: 10px;
+    border-radius: 9px;
+  }
+  
+  .total {
+    padding-top: 50px;
+    align-self: end;
+  }
+  .total p {
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #808eab;
+    letter-spacing: 0.15rem;
+  }
+  .total p:last-child {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0b82f8;
+    padding-top: 10px;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .detail {
+    font-family: "Roboto", sans-serif;
+    align-self: start;
+    display: grid;
+    margin-top: 32px;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .detail p {
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #808eab;
+    letter-spacing: 0.15rem;
+    margin-bottom: 10px;
+  }
+  .detail ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-family: "Roboto", sans-serif;
+    justify-content: center;
+    align-content: start;
+  }
+  .detail ul li {
+    display: inline-block;
+    color: #515860;
+    text-align: left;
+    font-size: 15px;
+  }
+  .detail ul li:last-child {
+    text-align: right;
+    color:  #515860;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .container .btn{
+    margin-top: 20px;
+    grid-area: btn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button {
+    align-self: center;
+    font-family: "Open Sans", sans-serif;
+    background: #00B74F;
+    color: #FFF;
+    border: 1px solid #FFF;
+    text-transform: uppercase;
+    font-size: 0.97rem;
+    opacity: 1;
+    font-weight: lighter;
+    padding: 7px 40px;
+    border-radius: 1.6rem;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s linear;
+    text-align: center;
+  }
+  button:hover {
+    transition: all 0.2s linear;
+    background: rgba(0, 183, 79, 0.3);
+    color: #00B74F;
+    opacity: 1;
+  }
+  
+  .subContainer {
+    height: 270px;
+    width: 400px;
+    border-radius: 9px;
+    font-family: "Roboto", sans-serif;
+    bottom: 0;
+    color: rgba(90,116,148,0.5);
+    min-height: 0;
+    min-width: 0;
+    background: rgba(90,116,148,0.1);
+    box-shadow: -10px 10px 60px 10px #ADB7C4;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "name name  . . . visa visa " "cardNum cardNum cardNum cardNum cardNum . ." " date date date . ccv ccv ccv ";
+  }
+  .subContainer p, .subContainer .visaCont, .subContainer .cardNum, .subContainer .date, .subContainer .ccv {
+    margin-left: 25px;
+    margin-top: -25px;
+  }
+  .subContainer p {
+    padding-top: 25px;
+    font-weight: 600;
+    grid-area: name;
+    margin-top: 0px;
+  }
+  .subContainer .visaCont {
+    display: grid;
+    grid-area: visa;
+    overflow: hidden;
+    margin: 0;
+    justify-self: center;
+    align-self: center;
+  }
+  .subContainer .visaCont svg {
+    height: 50px;
+    width: 100px;
+  }
+  .subContainer .cardNum {
+    position: relative;
+    grid-area: cardNum;
+    background:  rgba(90,116,148,0.07);
+    align-self: center;
+    padding: 7px 5px;
+    font-size: 19px;
+  }
+  .subContainer .cardNum:after {
+    content: "Número de Membresía";
+    color: rgb(255, 0, 0);
+  }
+  .subContainer .cardNum ul {
+    list-style-type: none;
+    text-align: center;
+  }
+  .subContainer .cardNum ul li {
+    display: inline-block;
+    font-family: "Montserrat", sans-serif;
+    margin: 0 auto;
+    letter-spacing: 1px;
+  }
+  .subContainer .cardNum ul li:last-child {
+    text-align: right;
+  }
+  .subContainer .date {
+    position: relative;
+    grid-area: date;
+    background: rgba(90,116,148,0.07);
+    align-self: center;
+    justify-self: left;
+  }
+  .subContainer .date:after {
+    content: "Fecha de Alta";
+    color: rgba(90,116,148, 1);
+  }
+  .subContainer .ccv {
+    position:relative;
+    grid-area: ccv;
+    align-self: center;
+    justify-self: left;
+    background: rgba(90,116,148,0.07);
+    padding-left: 0px;
+  }
+  .subContainer .ccv:after {
+    content: "Fecha de Vencimiento";
+    color: rgba(90,116,148, 1);
+  }
+  /* .subContainer .ccv p {
+    padding: 4px 12px;
+    letter-spacing: 1px;
+  } */
+
+  .subContainer .ccv:after, .subContainer .date:after, .subContainer .cardNum:after {
+    position: absolute;
+    top: -25px;
+    font-family: "Roboto", sans-serif;
+    left: 0;
+    color: #232323;
+    font-size: 13px;
+  }
+  
+  .subContainer .ccv p, .subContainer .date p {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    padding: 4px 20px;
+    padding-right: 25px;
+  }
+
+  .card1{
+    grid-area: mGrid;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card2{
+    grid-area: card;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 750px){
+    .container{
+      height: 600px;
+        /* grid-template-columns: repeat(1,auto); */
+        grid-template-rows: repeat(3,auto);
+
+        grid-template-areas:    "mGrid mGrid"
+                                "card card"
+                                "btn btn";
+    }
+    .card1{
+      margin-bottom: 50px;
+    }
+}
