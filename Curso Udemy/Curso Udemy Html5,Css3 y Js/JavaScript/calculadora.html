@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            background-color: black;
+            width: calc(40% - 10px);
+            height: 500px;
+            margin: 30px auto;
+            color: white;
+            font-size: 14px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .inputs{
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .inputs input{
+            width: 50%;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 400;
+            color: rgb(8, 8, 8);
+        }
+
+        .btn{
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+            justify-content: space-around;
+        }
+
+        .btn button{
+            width: 25%;
+            height: 50px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .result{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 80%;
+            margin: 30px 0 10px 0;
+        }
+
+        .result p{
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora</h1>
+        <div class="inputs">
+            <label for="">N1</label>
+            <input type="number" id="n1">
+            <label for="">N2</label>
+            <input type="number" id="n2">
+        </div>
+        <div id="btns" class="btn">
+            <button id="suma">Sumar</button>
+            <button id="resta">Restar</button>
+            <button id="mul">Multiplicar</button>
+            <button id="div">Dividir</button>
+        </div>
+
+        <div class="result">
+            <p id="res"></p>
+        </div>
+    </div>
+
+    <script>
+        function data (e) {
+            var n1 = parseFloat(document.getElementById("n1").value);
+            var n2 = parseFloat(document.getElementById("n2").value);
+            var res = document.getElementById("res")
+            var id = e.target.id
+            if (id == "suma" ) {
+                var resf = n1 + n2;
+            }
+            else if(id == "resta") {
+                var resf = n1 -n2;
+            }
+            else if(id == "mul"){
+                var resf = n1 * n2;
+            }
+            else if(id == "div"){
+                var resf = n1/n2;
+            }
+            
+            res.innerHTML = resf;
+        }
+ 
+        var btns = document.getElementById("btns");
+        btns.addEventListener("click", data);
+
+        
+    </script>
+</body>
+</html>

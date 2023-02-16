@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificando Elementos del DOM</title>
+    <style>
+        .container{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+
+        .grande{
+            width: 500px;
+            height: 500px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn" onclick="accion()">change</button>
+    <br>
+    <div class="container" id="box"></div>
+
+    <script>
+        var content = document.getElementById("box");
+        var btn = document.getElementById("btn");
+
+        function accion() {
+            // content.removeAttribute("class","container");
+            // content.className ="grande";
+
+            if (content.className == "container") {
+                content.className = "grande"
+            }
+            else {
+                content.className = "container"
+            }
+        }
+
+    </script>
+</body>
+</html>

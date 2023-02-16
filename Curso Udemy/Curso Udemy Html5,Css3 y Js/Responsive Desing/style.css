@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: gray;
+}
+
+.container{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+header, footer{
+    margin: 20px 0px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    /* background-color: black; */
+}
+
+section, aside, footer{
+    float: left;
+    padding: 20px;
+}
+
+header{
+    background-color: greenyellow;
+}
+
+section{
+    background: white;
+    width: 70%;
+}
+
+aside{
+    width: 30%;
+    background-color: orangered;
+}
+
+footer{
+    width: 100%;
+    background: black;
+}
+
+@media screen and (max-width: 500px){
+    section{
+        width: 100%;
+    }
+    aside{
+        width: 100%;
+    }
+}
+

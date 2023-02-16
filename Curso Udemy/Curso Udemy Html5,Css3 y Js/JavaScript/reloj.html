@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj</title>
+    <style>
+        div{
+            display: inline-flex;
+            margin-left: 20px;
+        }
+        .hora #ampm{
+            margin-left: 8px;
+            font-size: 20px;
+            color: rgb(63, 8, 227);
+            text-transform: lowercase;
+        }
+
+        .hora p{
+            margin: 0;
+            font-size: 30px;
+            margin-top: 20px;
+        }
+
+        .fecha p{
+            margin: 0;
+            margin-right: 15px;
+            font-size: 22px;
+            font-style: italic;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="hora">
+        <p id="horas"></p>
+        <p>:</p>
+        <p id="minutos"></p>
+        <p>:</p>
+        <p id="segundos"></p>
+        <p id="ampm">pm</p>
+
+    </div>
+    <br>
+    <div class="fecha">
+        <p id="diaSe"></p>
+        <p id="dia"></p>
+        <p> de</p>
+        <p id="mes"></p>
+        <p>del</p>
+        <p id="years">1990</p>
+    </div>
+
+    <script>
+        (function actualizarDatos(e){
+
+            var fecha = new Date(),ampm,
+                horas = fecha.getHours(),
+                min = fecha.getMinutes(),
+                seg = fecha.getSeconds(),
+                diaSem = fecha.getDay(),
+                dia = fecha.getDate(),
+                mes = fecha.getMonth(),
+                año = fecha.getFullYear();
+
+            var ehoras = document.getElementById("horas"),
+                eMin = document.getElementById("minutos"),
+                eSeg = document.getElementById("segundos"),
+                eampm = document.getElementById("ampm"),
+                ediase= document.getElementById("diaSe"),
+                edia = document.getElementById("dia"),
+                emes = document.getElementById("mes"),
+                years = document.getElementById("years");
+
+            var arraySemana = ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"];
+            var arrayMes = ["Enero", "Febrero","Marzo","Abril","Mayo","Junio","Julio"
+                            ,"Agosto", "Septiembre","Octubre","Noviembre","Diciembre"]
+            ediase.textContent = arraySemana[diaSem];
+            edia.textContent = dia;
+            emes.textContent = arrayMes[mes];
+            years.textContent = año;
+
+            if (horas >= 12) {
+                horas = horas - 12;
+                ampm = "PM";
+            }else{
+                ampm = "AM"
+            }
+
+            if (min < 10){
+                min = "0" + min
+            }
+            if (seg < 10){
+                seg = "0" + seg
+            }
+
+            if(horas == 0)[
+                horas = 12
+            ]
+
+
+
+            eMin.textContent = min;
+            ehoras.textContent = horas;
+            eSeg.textContent = seg;
+            eampm.textContent = ampm;
+
+            setInterval(actualizarDatos,1000)
+        }())
+
+    </script>
+</body>
+</html>

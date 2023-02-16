@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        header{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0px;
+            background: #686363;
+        }
+
+        li{
+            display: inline-block;
+            padding: 0px 20px;
+        }
+
+        a{
+            text-decoration: none;
+            text-transform: uppercase;
+            font: 14px;
+            color: #fff;
+            padding: 10px;
+        }
+
+        a:hover{
+            color: aqua;
+            transition: .5s;
+        }
+        .logo{
+            width: 100px;
+            cursor: pointer;
+        }
+
+        .btn{
+            margin: 10px;
+            padding: 10px 25px;
+            background-color: rgb(98, 8, 181);
+            border-radius: 10px;
+        }
+
+        .btn:hover{
+            background-color: blueviolet;
+            color: #0e0d0d;
+            box-shadow: 3px 3px 3px black;
+        }
+
+        .menu2{
+            padding: 10px auto;
+        }
+
+        .menu2 .logo{
+            margin-right: auto;
+        }
+
+        .menu3 .logo{
+            order: 2;
+
+        }
+
+        .menu3 nav{
+            order: 1;
+        }
+
+        .menu3 .btn{
+            order: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../img/logo-bolivar-1024.webp" alt="" class="logo">
+        <nav>
+            <ul>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Servicios</a></li>
+                <li><a href="">Portafolio</a></li>
+                <li><a href="">Multimedia</a></li>
+                <li><a href="">Contactos</a></li>
+            </ul>
+        </nav>
+        <a href="" class="btn">Login</a>
+
+        
+    </header>
+    <br>
+    <header class="menu2">
+        <img src="../img/logo-bolivar-1024.webp" alt="" class="logo">
+        <nav>
+            <ul>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Servicios</a></li>
+                <li><a href="">Portafolio</a></li>
+                <li><a href="">Multimedia</a></li>
+                <li><a href="">Contactos</a></li>
+            </ul>
+        </nav>
+        <a href="" class="btn">Login</a>
+
+        
+    </header>
+    <br>
+    <header class="menu3">
+        <img src="../img/logo-bolivar-1024.webp" alt="" class="logo">
+        <nav>
+            <ul>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Servicios</a></li>
+                <li><a href="">Portafolio</a></li>
+                <li><a href="">Multimedia</a></li>
+                <li><a href="">Contactos</a></li>
+            </ul>
+        </nav>
+        <a href="" class="btn">Login</a>
+
+        
+    </header>
+    
+</body>
+</html>
