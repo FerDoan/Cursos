@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beso | Cotizador</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/7e5b2d153f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="#" class="logo nav-link">Logo</a>
+        <button class="nav-toggle" aria-label="Abrir menú">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu">
+          <li class="nav-menu-item">
+            <a href="#" class="nav-menu-link nav-link nav-menu-link_active"
+              >Cotizaciones</a
+            >
+          </li>
+          <li class="nav-menu-item">
+            <a href="#" class="nav-menu-link nav-link">Provedores</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#" class="nav-menu-link nav-link">Recursos</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#" class="nav-menu-link nav-link">Reportes</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#" class="nav-menu-link nav-link">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <h1>Login</h1>
+        <form action="" id="form">
+          <div class="form__group form__div" id="emlc">
+            <span><i class="fas fa-solid fa-envelope"></i></span>
+            <input
+              name="eml"
+              class="campo"
+              id="eml"
+              type="email"
+              placeholder="Correo"
+            />
+            <p class="p-error">El correo de ser valido</p>
+          </div>
+          <div class="form__group form__div" id="pswdc">
+            <span><i class="fas fa-solid fa-lock"></i></span>
+            <input
+              name="pswd"
+              class="campo"
+              id="pswd"
+              type="password"
+              placeholder="Contraseña"
+            />
+            <p class="p-error">La contraseña debe ser valida</p>
+          </div>
+          <div class="form__group">
+            <div class="msj-f" id="msj-f">
+              <p class=""><span class="fas fa-exclamation-circle"></span><strong> Error: </strong>Por favor rellena todos los campos de correcta</p>
+            </div>
+            <button type="submit" href="pages/welcome.html">Acceder</button>
+            <div class="msj-exito" id="msj-exito">
+              <p class="">Datos enviados correctamente</p>
+            </div>
+          </div>
+          <div class="form__group__enlace">
+            <a class="enlace" href="#">¿Olvidaste tu contraseña?</a>
+          </div>
+        </form>
+        <hr />
+        <p>Inicie sesión con su cuenta de redes sociales</p>
+        <div class="div__group">
+          <a class="redes" href="#"><i class="fab fa-brands fa-twitter"></i></a>
+          <a class="redes" href="#"><i class="fab fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+    </main>
+
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>
