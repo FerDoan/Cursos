@@ -38,3 +38,37 @@ function moverIzq(){
 
 btnDer.addEventListener("click", moverDer);
 btnIz.addEventListener("click", moverIzq);
+
+// validar for
+var form = document.getElementById("form");
+
+const validar = (e) => {
+    inpNombre = document.getElementById("nombre");
+    inpEmail = document.getElementById("email");
+    inpCom = document.getElementById("comment");
+    alertSucess = document.getElementById("alert-sucess");
+    alertError = document.getElementById("alert-error");
+
+    if( inpNombre.value == 0 || inpCom.value == 0 || inpEmail.value == 0){
+        e.preventDefault();
+        alertError.classList.remove("hide");
+        alertError.classList.add("show");
+        setTimeout(() =>{
+            alertError.classList.add("hide");
+            alertError.classList.remove("show")
+        },3000)
+    }else{
+        e.preventDefault();
+        alertSucess.classList.remove("hide");
+        alertSucess.classList.add("show");
+        setTimeout(() =>{
+            alertSucess.classList.add("hide");
+            alertSucess.classList.remove("show")
+        },3000)
+        inpNombre.value ="";
+        inpCom.value = "";
+        inpEmail.value = "";
+    }
+}
+
+form.addEventListener("submit", validar);
