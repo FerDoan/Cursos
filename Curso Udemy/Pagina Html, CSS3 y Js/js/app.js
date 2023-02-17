@@ -72,3 +72,37 @@ const validar = (e) => {
 }
 
 form.addEventListener("submit", validar);
+
+// scroll top boton
+var btnTop = document.getElementById("btn-top");
+
+// detextar scroll
+window.addEventListener('scroll', () =>{
+    var scroll = document.documentElement.scrollTop;
+    var fullScreen = document.documentElement.offsetHeight; //detectar el alto 
+    var sizeVp = document.documentElement.clientHeight;
+    if (scroll > 100) {
+        btnTop.classList.add('show');
+    }else{
+        btnTop.classList.remove('show')
+    }
+
+    // modidficar cuando llegue al final
+    if (fullScreen == ( scroll + sizeVp )) {
+        btnTop.classList.add('scrollfinal')
+    }
+    else{
+        btnTop.classList.remove('scrollfinal')
+    }
+})
+
+//detectar evento click
+btnTop.addEventListener('click',()=>{
+    window.scrollTo(0,0)
+})
+
+var btnlogo = document.getElementById('logo');
+
+btnlogo.addEventListener('click',() =>{
+    window.scrollTo(0,0);
+})
