@@ -8,7 +8,30 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
+h1{
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--color-title);
+}
+
+h2{
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--color-subtitle);
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    transition: all .4s;
+}
+
 /* SIDE BAR */
 .nav-bar{
     background: #000;
@@ -78,19 +101,23 @@
 
 .btn-side{
     position: absolute;
-    right: -55px;
-    top: 0;
+    /* right: -55px;
+    top: 0; */
     width: 55px;
     height: 50px;
 }
 
 .nav-bar.show{
-    transform: translateX(0);
+    /* transform: translateX(0); */
+    display: block;
     width: 300px;
+    transition: all .5s;
 }
 
 .nav-bar.hide{
-    transform: translateX(-100%);
+    /* transform: translateX(-100%); */
+    display: none;
+    transition: all .5s;
 }
 
 #btnSideA{
@@ -112,10 +139,84 @@
     display: none;
 }
 /* SIDE BAR */
+
+/* CONTENEDOR PRINCIPAL */
+main {
+    width: 100%;
+}
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.layout-home .title{
+    position: relative;
+    right: -70px;
+    margin-right: 300px;
+}
+
+.layout-home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* box-sizing: border-box; */
+}
+
+.card{
+    /* position: relative; */
+    display: flex;
+    /* width: calc(100% - 300px); */
+    /* width: 100%; */
+    /* margin-left: 10px;
+    margin-right: 10px; */
+    background: #ca0b8b;
+    /* height: calc(100vh - 10px); */
+    height: 100%;
+    margin: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    padding: 10px;
+}
+
+.item{
+    width: 40%;
+    display: flex;
+    height: 30%;
+    background: var(--color-subtitle);
+    gap: 3;
+    border: 1px solid #000;
+}
+
+/* .card-header{
+
+}
+
+.card-body{
+
+}
+
+.card-footer{
+
+} */
+
+/* .home {
+    width: 100%;
+    display: flex;
+} */
+
+
+/* CONTENEDOR PRINCIPAL */
 @media screen  and (max-width:850px){
     /* SIDE BAR */
     .nav-bar{
-        transform: translateX(-100%);
+        /* transform: translateX(-100%); */
+        display: none;
         transition: all .5s;
     }
 
@@ -127,4 +228,19 @@
     }
     /* SIDE BAR */
 
+}
+
+@media screen and (max-width:650px){
+    .nav-bar{
+        height: 100vh;
+    }
+    .layout-home{
+        height: 100%;
+    }
+    .card{
+        height: 100%;
+    }
+    .item{
+        width: 80%;
+    }
 }
