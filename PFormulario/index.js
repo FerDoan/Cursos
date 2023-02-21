@@ -146,7 +146,7 @@ form.addEventListener('submit',(e)=>{
         toast.classList.toggle("toast-close")
         setTimeout(() =>{
             toast.classList.toggle("toast-close")
-        },1000)
+        },2000)
 
         document.querySelectorAll('.true').forEach((pass) => {
             pass.classList.remove('true');
@@ -164,6 +164,6 @@ form.addEventListener('submit',(e)=>{
         toastw.classList.toggle("toast-close")
         setTimeout(() =>{
             toastw.classList.toggle("toast-close")
-        },1000)
+        },2000)
     }
 })
