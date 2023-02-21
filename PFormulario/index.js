@@ -17,7 +17,8 @@ btnI.addEventListener('click',(e) =>{
 // })
 
 // fleI.addEventListener('change', () =>{
-//     const file = this.files[0];
+//     // const file = this.files[0];
+//     const file = fleR.files[0]
 //     if(file){
 //         const reader = new FileReader();
 //         reader.onload = () =>{
