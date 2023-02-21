@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="title">Cotizador</h1>
+      </header>
+      <main>
+        <form action="" id="form">
+          <div class="column1">
+            <div id="clt" class="inp-g">
+
+                <label for="clt">Cliente</label>
+                <input
+                  type="text"
+                  placeholder="Nombre del cliente"
+                  class="inp"
+                  id="clt"
+                />
+                <p class="p-error">El nombre del cliente no debe tener carateres especiales</p>
+
+            </div>    
+            
+            <label for="pvdr">proveedor</label>
+            <select name="pvdr" id="pvdr" class="inp">
+              <option value="" disabled selected hidden>
+                Tipo de proveedor
+              </option>
+
+              <option value="opcion1">opcion 1</option>
+              <option value="opcion2">opcion 2</option>
+              <option value="opcion3">opcion 3</option>
+            </select>
+
+            <label for="rcs">Recurso</label>
+            <select name="rcs" id="rcs" class="inp">
+              <option value="" disabled selected hidden>
+                Tipo de proveedor
+              </option>
+              <option value="opcion1">opcion 1</option>
+              <option value="opcion2">opcion 2</option>
+              <option value="opcion3">opcion 3</option>
+            </select>
+            <div id="prtj" class="inp-g">
+
+                <input
+                  class="inp"
+                  type="number"
+                  name="prtj"
+                  id="prtj"
+                  placeholder="PORCENTAJE"
+                />
+                <p class="p-error">Debe contener al menos un numero del 0 al 100</p>
+            </div>
+          </div>
+          <div class="column2">
+            <input
+              type="file"
+              class="btn-file"
+              name="fleimg"
+              id="fleimg"
+              hidden
+            />
+            <button id="btnI" class="btn-file">Añadir imagen</button>
+            <span id="fileI"></span>
+            <div class="inp-g" id="rfc">
+                <input
+                  class="inp"
+                  type="text"
+                  name="rfc"
+                  id="rfc"
+                  placeholder="RFC"
+                  maxlength="13"
+                />
+                <p class="p-error">El RFC  de ser de una longitud de 13 digitos</p>
+            </div>
+
+            <input type="file" class="btn-file" name="fler" id="fler" hidden />
+            <button id="btnR" class="btn-file">Añadir recurso</button>
+            <span id="fileR"></span>
+          </div>
+          <button type="submit" class="btnG" id="btnG">Generar propuesta</button>
+        </form>
+      </main>
+      <div class="toast-success toast-close">
+        <h2>Propuesta generada</h2>
+      </div>
+      <div class="toast-warning toast-close">
+        <h2>Revisa los campos, e intenta de nuevo</h2>
+      </div>
+      <div class="modal-container">
+        <div class="modal modal-close">
+          <p class="close">X</p>
+          <!-- <div class="modal-img">
+            <img src="img/ESPECIAS.webp" alt="" />
+          </div> -->
+          <div class="modal-text">
+            <h2>Elija el recurso</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates, sunt! Ipsam alias nostrum sed consequatur ver
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
