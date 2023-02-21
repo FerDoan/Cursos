@@ -116,6 +116,12 @@ label{
     border: 2px solid #48ff00;
 }
 
+.fileI{
+    margin-top: -18px;
+    font-weight: 600;
+    color: #0239ff;
+}
+
 .p-error{
     position: relative;
     padding: 10px;

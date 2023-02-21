@@ -16,18 +16,20 @@ btnI.addEventListener('click',(e) =>{
 //     fleR.click();
 // })
 
-// fleI.addEventListener('change', () =>{
-//     // const file = this.files[0];
-//     const file = fleR.files[0]
-//     if(file){
-//         const reader = new FileReader();
-//         reader.onload = () =>{
-//             const result = reader.result;
-//             fileI.textContent = result;
-//         }
-//         reader.readAsDataURL(file);
-//     }
-// })
+fleI.addEventListener('change', () =>{
+    // const file = this.files[0];
+    const file = fleI.files[0]
+    console.log(file.name)
+    if(file){
+        const reader = new FileReader();
+        reader.onload = () =>{
+            const result = reader.result.name;
+            fileI.textContent = file.name;
+            // fileI.textContent = result;
+        }
+        reader.readAsDataURL(file);
+    }
+})
 
 // SECCION MODAL
 
