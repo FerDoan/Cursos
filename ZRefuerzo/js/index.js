@@ -1,6 +1,11 @@
-var btnSideC = document.getElementById('btnSideC');
-var btnSideA = document.getElementById('btnSideA');
-var sideHC = document.getElementById('navBar');
+// import nuser from "./login.js";
+// import { gName } from "./dataGlobal.js";
+document.getElementById('user').textContent = 'Fer';
+
+// console.log(gName)
+const btnSideC = document.getElementById('btnSideC');
+const btnSideA = document.getElementById('btnSideA');
+const sideHC = document.getElementById('navBar');
 
 const sideHideC = () => {
     btnSideA.classList.add('show');
@@ -22,3 +27,4 @@ const sideHideA = () => {
 
 btnSideC.addEventListener('click', sideHideC)
 btnSideA.addEventListener('click', sideHideA)
+

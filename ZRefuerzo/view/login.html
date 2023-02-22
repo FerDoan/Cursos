@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../lib/fontawesome-free-6.3.0-web/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login">
+        <form action="" id="form">
+            <div class="title-login">
+                <h1>Iniciar sesion</h1>
+            </div>
+            <div class="formInp" id="cltc">   
+                <label for="">Nombre</label>
+                <input class="inp" type="text" id="clt">
+                <span class="msj">Verifique que los datos sean correctos</span>
+            </div>
+            <div class="formInp" id="pswc">   
+                <label for="">Contraseña</label>
+                <input class="inp" type="password" id="psw">
+                <span class="msj">La contrseña debe de tener entre 4 a 14 caracteres</span>
+            </div>
+
+            <button type="submit" class="btnL" id="btnLogin">Login</button>
+        </form>
+    </div>
+
+    <div class="toast-error toast-close">
+        <p>Upps, hubo algun error al querer iniciar sesion, comprueba los datos</p>
+    </div>
+    <div class="toast-success toast-close">
+        <p>Inicio de sesion correcto</p>
+    </div>
+
+    <li class="user" hidden>
+        <span class="fas fa-user-circle"></span>
+        <h4 id="user"> </h4>
+      
+    </li>
+
+    <script src="../js/login.js" type="module"></script>
+</body>
+</html>
