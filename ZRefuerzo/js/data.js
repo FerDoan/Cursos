@@ -1,4 +1,4 @@
-const datos = {
+const dat = {
     usuarios:[
         {
             id:1,
@@ -27,4 +27,4 @@ const datos = {
     ]
 };
 
-export default datos;
+export default dat;

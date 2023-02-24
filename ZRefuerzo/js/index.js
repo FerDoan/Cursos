@@ -204,9 +204,10 @@ const close = document.querySelectorAll('.close')[0];
 // const open = document.querySelectorAll('.cta')[0];
 const modal = document.querySelectorAll('.modal')[0];
 const modalC = document.querySelectorAll('.modal-container')[0];
-
+// const AddU = document.getElementById('AddUser');
 btnA.addEventListener('click',(e)=>{
     e.preventDefault();
+    console.log('sisis')
     modalC.style.opacity = "1";
     modalC.style.visibility = "visible";
     modal.classList.toggle("modal-close")
@@ -222,6 +223,16 @@ close.addEventListener('click',(e)=>{
     modalC.style.visibility = "hidden";
     },700)
 })
+// AddU.addEventListener('click',(e)=>{
+//     e.preventDefault();
+//     // modalC.style.opacity = "0";
+//     // modalC.style.visibility = "hidden";
+//     modal.classList.toggle('modal-close')
+//     setTimeout(() => {
+//         modalC.style.opacity = "0";
+//     modalC.style.visibility = "hidden";
+//     },700)
+// })
 
 window.addEventListener('click',(e)=>{
     // console.log(e.target)

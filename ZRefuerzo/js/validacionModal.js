@@ -1,5 +1,5 @@
 // import datos from "data.js";
-import datos from "./data.js";
+import dat from "./data.js";
 // const data = require('../data')
 // Primero accedemos a a los datos del form para 
 // ya tenerlos
@@ -12,6 +12,8 @@ const expresiones = {
     cliente: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
     password: /^.{4,12}$/
 }
+
+const datos = dat.usuarios;
 
 const campos = {
     cltc: false,
@@ -37,7 +39,7 @@ const dataPush = {
     id: Date.now(),
     name: '',
     password: '', 
-    id: '1'
+    admin: '1'
 }
 
 
@@ -102,7 +104,7 @@ const toastS = document.querySelectorAll('.toast-success')[0];
 
 //comparar con json
 const verificarUser = () => {
-    datos.usuarios.forEach((d) => {
+    datos.forEach((d) => {
     // console.log(d.name)
     if (d.name == dataPush.name && d.password == dataPush.password) {
         campos.name = true;
@@ -111,6 +113,15 @@ const verificarUser = () => {
     }
 })
 }
+
+// const btnA = document.getElementById('agregar');
+
+// btnA.addEventListener('click',(e)=>{
+//     e.preventDefault();
+//     modalC.style.opacity = "1";
+//     modalC.style.visibility = "visible";
+//     modal.classList.toggle("modal-close")
+// })
 
 //para pasar nombre de usuario
 // const nuser = document.getElementById('user');
@@ -125,6 +136,8 @@ const ttlb = document.getElementById('tlb');
 
 const charge = () => { 
     limpiarTable();
+    datos.push(dataPush)
+
     const trAc = document.createElement('tr');
 trAc.className = 'trAc';
 const dtV = document.createElement('th');
@@ -155,7 +168,7 @@ trenc.appendChild(dtAcc);
 
 ttlb.appendChild(trAc);
 ttlb.appendChild(trenc);
-    datos.usuarios.map((user) =>{
+    datos.map((user) =>{
     // console.log(user)
     // const tlb = document.createElement('table')
     const trUsers = document.createElement('tr');
@@ -205,7 +218,7 @@ ttlb.appendChild(trenc);
         // }       
         if (checkU.checked) {
             user.admin = '1';
-            datos.usuarios.push(nuevo)
+            datos.push(nuevo)
             ttlb.appendChild(trUsers);
             // console.log(localStorage)
             // console.log(data.usuarios)
@@ -231,15 +244,40 @@ const limpiarTable = () =>{
 
 const fAdd = document.getElementById('fAdd');
 
+const limpiarDatos = () => {
+    dataPush.id = Date.now();
+    dataPush.name = '';
+    dataPush.password = '';
+    dataPush.admin = '';
+}
+// const modal = document.querySelectorAll('.modal')[0];
+// const modalC = document.querySelectorAll('.modal-container')[0];
+
+// const btnA = document.getElementById('agregar');
+// btnA.addEventListener('click',(e)=>{
+//     e.preventDefault();
+//     console.log('sisis')
+//     modalC.style.opacity = "1";
+//     modalC.style.visibility = "visible";
+//     modal.classList.toggle("modal-close")
+// })
+
 fAdd.addEventListener('submit',(e) => {
     e.preventDefault();
     console.log('si entra aqui')
-    datos.usuarios.push(dataPush)
-    // userA = data;
+    // datos.push(dataPush)
+    // userA = data;   
     console.log(datos.usuarios) 
     verificarUser();
     if(campos.cltc && campos.pswc){
         fAdd.reset();
+            // modalC.style.opacity = "0";
+            // modalC.style.visibility = "hidden";
+        // modal.classList.toggle('modal-close')
+        // setTimeout(() => {
+        //     modalC.style.opacity = "0";
+        // modalC.style.visibility = "hidden";
+        // },700)
         toastS.classList.toggle('toast-close')
         setTimeout(()=>{
             toastS.classList.toggle('toast-close')
@@ -253,6 +291,8 @@ fAdd.addEventListener('submit',(e) => {
         // dataPush.name = '';
         // dataPush.password = '';
         charge();
+        limpiarDatos();
+        // console.log(dataPush)
         // campos.name = false;
         // campos.pass = false;
         // localStorage.user = data.name;

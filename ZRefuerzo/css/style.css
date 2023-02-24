@@ -555,6 +555,16 @@ section table .trAc th:nth-child(3){
     padding: 10px;
     top: 0;
 }
+
+.btn-ag span{
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.btn-ag span:hover{
+    color: #d6ded8;
+    transform: scale(110%);
+}
 /* fin Modal */
 
 .stadistics{
