@@ -459,6 +459,27 @@ section table .trAc th{
 section table .trAc th:nth-child(3){
     background: #000;
 }
+
+.btn-add{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    color: #fff;
+    font-size: 20px;
+    transition: all .5s;
+}
+.btn-add span{
+    padding: 14px;
+    background: #000;
+    transition: all .5s;
+    cursor: pointer;
+    
+}
+
+.btn-add span:hover{
+    background: #f9f9f9;
+    color: #000;
+}
 /* FIN TABLE */
 
 /* Modal */

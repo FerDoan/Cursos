@@ -138,19 +138,19 @@ const charge = () => {
     limpiarTable();
     datos.push(dataPush)
 
-    const trAc = document.createElement('tr');
-trAc.className = 'trAc';
-const dtV = document.createElement('th');
-const dtVa = document.createElement('th');
-const dtB = document.createElement('th');
-dtB.classList = 'btn-ag';
-const Bsp = document.createElement('span');
-Bsp.classList = 'fas fa-plus-circle';
-Bsp.id = 'agregar';
-dtB.appendChild(Bsp)
-trAc.appendChild(dtV);
-trAc.appendChild(dtVa);
-trAc.appendChild(dtB);
+//     const trAc = document.createElement('tr');
+// trAc.className = 'trAc';
+// const dtV = document.createElement('th');
+// const dtVa = document.createElement('th');
+// const dtB = document.createElement('th');
+// dtB.classList = 'btn-ag';
+// const Bsp = document.createElement('span');
+// Bsp.classList = 'fas fa-plus-circle';
+// Bsp.id = 'add';
+// dtB.appendChild(Bsp)
+// trAc.appendChild(dtV);
+// trAc.appendChild(dtVa);
+// trAc.appendChild(dtB);
 
 const trenc = document.createElement('tr');
 const dtUser = document.createElement('th');
@@ -166,7 +166,7 @@ trenc.appendChild(dtUser);
 trenc.appendChild(dtCon);
 trenc.appendChild(dtAcc);
 
-ttlb.appendChild(trAc);
+// ttlb.appendChild(trAc);
 ttlb.appendChild(trenc);
     datos.map((user) =>{
     // console.log(user)
@@ -261,6 +261,20 @@ const limpiarDatos = () => {
 //     modalC.style.visibility = "visible";
 //     modal.classList.toggle("modal-close")
 // })
+const btnA = document.getElementById('add');
+const close = document.querySelectorAll('.close')[0];
+// const open = document.querySelectorAll('.cta')[0];
+const modal = document.querySelectorAll('.modal')[0];
+const modalC = document.querySelectorAll('.modal-container')[0];
+// const AddU = document.getElementById('AddUser');
+if(btnA){
+btnA.addEventListener('click',(e)=>{
+    e.preventDefault();
+    console.log('sisis')
+    modalC.style.opacity = "1";
+    modalC.style.visibility = "visible";
+    modal.classList.toggle("modal-close")
+})}
 
 fAdd.addEventListener('submit',(e) => {
     e.preventDefault();
@@ -292,6 +306,11 @@ fAdd.addEventListener('submit',(e) => {
         // dataPush.password = '';
         charge();
         limpiarDatos();
+        modal.classList.toggle('modal-close')
+        setTimeout(() => {
+            modalC.style.opacity = "0";
+        modalC.style.visibility = "hidden";
+        },700)
         // console.log(dataPush)
         // campos.name = false;
         // campos.pass = false;
