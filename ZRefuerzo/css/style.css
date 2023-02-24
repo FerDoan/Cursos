@@ -571,8 +571,8 @@ section table .trAc th:nth-child(3){
     width: 90%;
     height: 600px;
     margin: 20px auto;
-    background: #000;
-    color: #fff;
+    /* background: #000;
+    color: #000000; */
     display: flex;
     justify-content: center;
 }
@@ -580,11 +580,13 @@ section table .trAc th:nth-child(3){
 .grafica{
     width: 90%;
     height: 90%;
-    background: #ffffff65;
+    background: #ffffff;
     position: relative;
     /* bottom: 0; */
     display: flex;
     justify-content: center;
+    margin-top: 20px;
+    border: 1px solid #000;
     
 }
 
@@ -628,9 +630,11 @@ section table .trAc th:nth-child(3){
 }
 .grafica ul #orders{
     background: var(--color-primary);
+    height: 300px;
 }
 .grafica ul #cancel{
     background: var(--color-border);
+    height: 100px;
 }
 
 .grafica .bar{
