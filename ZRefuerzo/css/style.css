@@ -50,6 +50,17 @@ body{
     border: 1px solid var(--color-border);
     border-radius: 10px;
 }
+.modal-text form{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    background: var(--color-dif);
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+}
 
 .title-login{
     width: 100%;
@@ -90,6 +101,14 @@ body{
     display: block;
     margin-top: 10px;
     color: #ff0606;
+}
+
+.msj-error_add{
+    display: block;
+    margin-top: 10px;
+    color: #ff0606;
+    position: absolute;
+
 }
 
 .toast-error{
@@ -219,10 +238,11 @@ body{
     align-items: center;
     color: #fff;
     position: absolute;
-    margin-bottom: -10px;
+    /* margin-bottom: -10px; */
     bottom: 50px;
     font-size: 20px;
     cursor: pointer;
+    transition: all .5s;
 }
 
 /* .nav-bar button {
@@ -240,9 +260,18 @@ body{
 
 .btn-side{
     position: absolute;
- 
-    width: 55px;
-    height: 50px;
+    background: var(--color-dif);
+    width: 35px;
+    height: 30px;
+    border: none;
+    font-size: 30px;
+    color: var(--color-border);
+    transition: all .5s;
+}
+
+.btn-side:hover{
+    color: var(--color-primary);
+    transform: scale(105%);
 }
 
 .nav-bar .btn{
@@ -280,6 +309,33 @@ body{
 #btnSideA.hide{
     display: none;
 } */
+
+/* boton logout */
+.drop-content{
+    display: none;
+    position: absolute;
+    top: -42px;
+    background: #f9f9f9;
+    min-width: 160px;
+    color: #000;
+    box-shadow: 0px -8px 16px 0px rgba(246, 235, 235, 0.484);
+    z-index: 1;
+    transition: all .5s;
+}
+
+.drop-content a{
+    color: #000;
+    transition: all .5s;
+}
+.drop-content a:hover{
+    color: #0a0a0a;
+    background: #98878793;
+}
+
+.user:hover .drop-content{
+     display: block;
+}
+/* fin logout */
 /* SIDE BAR */
 
 /* CONTENEDOR PRINCIPAL */
@@ -295,7 +351,7 @@ section{
 
 .title{
     position: relative;
-    right: -70px;
+    right: -40px;
     margin-right: 300px;
 }
 
@@ -395,7 +451,194 @@ section table td{
 section table tr:nth-child(odd){
     background: #5f605f38;
 }
+
+section table .trAc th{
+    background: transparent;
+}
+
+section table .trAc th:nth-child(3){
+    background: #000;
+}
 /* FIN TABLE */
+
+/* Modal */
+.modal-container{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    width: 350px;
+    height: 50%;
+    text-align: center;
+    background: #b8afaf;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    transition: all 1s;
+    transform: translateY(0%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: red;
+    color: aliceblue;
+    line-height: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.modal-close{
+    transform: translateY(-200%);
+}
+
+.modal > .modal-img{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.modal img{
+    width: 80%;
+}
+
+.modal-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    /* width: 90%; */
+    color: #151414;
+}
+
+.modal-text .title-login{
+    margin-bottom: 30px;
+}
+
+.modal-text .formInp{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-text input{
+    border-radius: 5px;
+    /* width: 40%;
+    align-items: end; */
+}
+
+.modal-text button{
+    width: 100px;
+    margin-top: 20px;
+    padding: 10px;
+    top: 0;
+}
+/* fin Modal */
+
+.stadistics{
+    width: 90%;
+    height: 600px;
+    margin: 20px auto;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.grafica{
+    width: 90%;
+    height: 90%;
+    background: #ffffff65;
+    position: relative;
+    /* bottom: 0; */
+    display: flex;
+    justify-content: center;
+    
+}
+
+.grafica ul {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+}
+/* .grafica ul{
+    width: 600px;
+    height: 95%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+} */
+
+/* .grafica ul li{
+    position: absolute;
+    width: 28px;
+    height: 160px;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    background: #057020;
+    text-align: center;
+    line-height: 2.5em;
+
+} */
+.grafica ul li{
+    /* background: #057020; */
+    height: 90%;
+    width: 40px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.grafica ul #ventas{
+    background: var(--color-subtitle);
+}
+.grafica ul #orders{
+    background: var(--color-primary);
+}
+.grafica ul #cancel{
+    background: var(--color-border);
+}
+
+.grafica .bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 50%;
+    list-style: none;
+    margin: 30%;
+    bottom: 10px;
+}
+
+.grafica .bar h4{
+    bottom: 0;
+    letter-spacing: 2px;
+    border-top: 1px solid #000;
+    padding: 10px;
+}
 
 /* CONTENEDOR PRINCIPAL */
 @media screen  and (max-width:850px){

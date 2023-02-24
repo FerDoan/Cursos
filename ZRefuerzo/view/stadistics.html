@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../lib/fontawesome-free-6.3.0-web/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" id="ctn">
+        <!-- <header> -->
+        <!-- <div class="logo">
+              <img src="" alt="">
+          </div> -->
+        <nav id="navBar" class="nav-bar side-barO">
+          <!-- <button id="btnSideC" class="btn-side">
+              <i class="fas fa-arrow-left"></i>
+            </button>
+            <button id="btnSideA" class="btn-side">
+              <i class="fas fa-arrow-right"></i>
+            </button> -->
+  
+          <ul>
+            <li class="liO">
+              <div class="logo">
+                <img src="../img/logo.webp" alt="" />
+              </div>
+            </li>
+            <li class="liO">
+              <a href="index.html" id="adm"
+                ><span class="fas fa-screwdriver-wrench"></span>
+                <h4>Aministración</h4></a
+              >
+            </li>
+            <li class="liO">
+              <a href="#" id="est"
+                ><span class="fas fa-bar-chart"></span>
+                <h4>Estadisticas</h4></a
+              >
+            </li>
+            <li class="liO">
+              <a href="#"
+                ><span class="fas fa-solid fa-truck"></span>
+                <h4>Pedidos</h4></a
+              >
+            </li>
+            <li class="liO">
+              <a href="#"
+                ><span class="fas fa-cash-register"></span>
+                <h4>Ventas</h4></a
+              >
+            </li>
+            <li class="liO">
+              <a href="#"
+                ><span class="fas fa-road-circle-exclamation"></span>
+                <h4>Sequimiento</h4></a
+              >
+            </li>
+            <li class="liO">
+              <a href="#"
+                ><span class="fas fa-cart-shopping"></span>
+                <h4>Productos</h4></a
+              >
+            </li>
+            <li class="user liO">
+                <span class="fas fa-user-circle"></span>
+                <h4 id="user"> </h4>
+                <div class="drop-content">
+                  <a href="../view/login.html" id="logout">Logout</a>
+                </div>
+              
+            </li>
+          </ul><div class="btn">
+          <button id="btnSideC" class="btn-side">
+            <i class="fas fa-square-caret-right"></i>
+          </button>
+          <!-- <button id="btnSideA" class="btn-side">
+            <i class="fas fa-arrow-right"></i>
+          </button> -->
+        </div>
+        </nav>
+        <main>
+            <div class="stadistics">
+                <div class="grafica">
+                    <ul>
+                        <div class="bar">
+                            <li id="ventas"></li>
+                            <h4>Ventas</h4>             
+                        </div>
+                        <div class="bar">
+                            <li id="orders"></li>
+                            <h4>Pedidos</h4>
+                        </div>
+                        <div class="bar">
+                            <li id="cancel"></li>
+                            <h4>Cancelados</h4>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>  
+
+    <script src="../js/index.js" type="module"></script>
+</body>
+</html>

@@ -33,9 +33,11 @@ const campos = {
 //     ]
 // };
 
-const data = {
+const dataPush = {
+    id: Date.now(),
     name: '',
-    password: ''
+    password: '', 
+    id: '1'
 }
 
 
@@ -48,11 +50,12 @@ const validarFormularioCC = (e) =>{
             //llamamos a la funcion y le mandamos los valores
             validarForm(expresiones.cliente,e.target,"cltc")
             //le pasamos el valor de campo del div para poder agregar subclase
-            data.name = e.target.value;
+            dataPush.name = e.target.value;
+            
             break;
         case "psw":
             validarForm(expresiones.password,e.target,"pswc")
-            data.password = e.target.value
+            dataPush.password = e.target.value
             break;
 
         default:
@@ -100,8 +103,8 @@ const toastS = document.querySelectorAll('.toast-success')[0];
 //comparar con json
 const verificarUser = () => {
     datos.usuarios.forEach((d) => {
-    console.log(d.name)
-    if (d.name == data.name && d.password == data.password) {
+    // console.log(d.name)
+    if (d.name == dataPush.name && d.password == dataPush.password) {
         campos.name = true;
         campos.pass = true;
         // console.log('auie')
@@ -112,65 +115,150 @@ const verificarUser = () => {
 //para pasar nombre de usuario
 // const nuser = document.getElementById('user');
 
-export const nuser = data.name;
-
-// evento que se activa al hacer submit en el form
-form.addEventListener('submit',(e) => {
-    e.preventDefault();
-    verificarUser();
-    if(campos.cltc && campos.pswc && campos.name && campos.pass){
-        form.reset();
-        toastS.classList.toggle('toast-close')
-        setTimeout(()=>{
-            toastS.classList.toggle('toast-close')
-        },2000)
-
-        inp.forEach((input) =>{
-            input.classList.remove('true')
-        })
-        campos.cltc = false;
-        campos.pswc = false;
-        campos.name = false;
-        campos.pass = false;
-        localStorage.user = data.name;
-        // nuser.textContent = data.name;
-        // document.querySelector('#user').textContent = 'Fer';
-        location.href = 'index.html'
-    }else{
-        toastE.classList.toggle('toast-close')
-        console.log('algo fallo')
-        setTimeout(()=>{
-            toastE.classList.toggle('toast-close')
-        },2000)
-    }
-})
-
 // Validación Add User
+const userA = {
+    name:'',
+    password:'',
+    admin:'1'
+}
+const ttlb = document.getElementById('tlb');
+
+const charge = () => { 
+    limpiarTable();
+    const trAc = document.createElement('tr');
+trAc.className = 'trAc';
+const dtV = document.createElement('th');
+const dtVa = document.createElement('th');
+const dtB = document.createElement('th');
+dtB.classList = 'btn-ag';
+const Bsp = document.createElement('span');
+Bsp.classList = 'fas fa-plus-circle';
+Bsp.id = 'agregar';
+dtB.appendChild(Bsp)
+trAc.appendChild(dtV);
+trAc.appendChild(dtVa);
+trAc.appendChild(dtB);
+
+const trenc = document.createElement('tr');
+const dtUser = document.createElement('th');
+const dtCon = document.createElement('th');
+const dtAcc = document.createElement('th');
+let txtUser = document.createTextNode('Nombre de Usuario');
+let txtCon = document.createTextNode('Contraseña');
+let txtAcc = document.createTextNode('Acciones');
+dtUser.appendChild(txtUser);
+dtCon.appendChild(txtCon);
+dtAcc.appendChild(txtAcc);
+trenc.appendChild(dtUser);
+trenc.appendChild(dtCon);
+trenc.appendChild(dtAcc);
+
+ttlb.appendChild(trAc);
+ttlb.appendChild(trenc);
+    datos.usuarios.map((user) =>{
+    // console.log(user)
+    // const tlb = document.createElement('table')
+    const trUsers = document.createElement('tr');
+    const dtName = document.createElement('td');
+    const dtPass = document.createElement('td');
+    const dtAccion = document.createElement('td');
+    dtAccion.style.textAlign = 'center';
+    let txtPass = document.createTextNode(user.password);
+    let txtName = document.createTextNode(user.name);
+    //Creacion de botones
+    const check = document.createElement('input');
+    check.id = user.name;
+    check.type = 'checkbox';
+
+    if (user.admin == '1') {
+        check.checked = true;
+    }
+
+    dtAccion.appendChild(check)
+    dtName.appendChild(txtName);
+    dtPass.appendChild(txtPass);
+    trUsers.appendChild(dtName);
+    trUsers.appendChild(dtPass);
+    trUsers.appendChild(dtAccion);
+    ttlb.appendChild(trUsers);
+    // tlb.appendChild(ttlb);
+    
+    const checkU = document.getElementById(user.name);
+    // if (user.admin == '1') {
+    //     checkU.checked = true
+    //     console.log('activo')
+    // }
+    const nuevo = {
+                id:5,
+                name:'Nuevo',
+                password:'2222',
+                admin: '1'
+            
+    }
+
+    const valorChec = (e) =>{
+        // e.preventDefault();
+        // dtAccion.checked 
+        // console.log(checkU)
+        // if (user.admin == '1') {
+        //     dtAccion.checked
+        // }       
+        if (checkU.checked) {
+            user.admin = '1';
+            datos.usuarios.push(nuevo)
+            ttlb.appendChild(trUsers);
+            // console.log(localStorage)
+            // console.log(data.usuarios)
+            // console.log(user.id)
+            // charge();
+        }else{
+            user.admin = '0';
+        }
+    }
+     checkU.addEventListener('click',valorChec)
+    
+
+})}
+
+// limpiar tabla
+const limpiarTable = () =>{
+    // const tableUser = document.querySelector('.lista-users');
+    // console.log(tableUser.firstChild)
+    while(ttlb.firstChild){
+        ttlb.removeChild(ttlb.firstChild);
+    }
+}
 
 const fAdd = document.getElementById('fAdd');
 
 fAdd.addEventListener('submit',(e) => {
     e.preventDefault();
     console.log('si entra aqui')
+    datos.usuarios.push(dataPush)
+    // userA = data;
+    console.log(datos.usuarios) 
     verificarUser();
-    if(campos.cltc && campos.pswc && campos.name && campos.pass){
-        form.reset();
+    if(campos.cltc && campos.pswc){
+        fAdd.reset();
         toastS.classList.toggle('toast-close')
         setTimeout(()=>{
             toastS.classList.toggle('toast-close')
         },2000)
 
-        inp.forEach((input) =>{
+        inpAdd.forEach((input) =>{
             input.classList.remove('true')
         })
         campos.cltc = false;
         campos.pswc = false;
-        campos.name = false;
-        campos.pass = false;
-        localStorage.user = data.name;
+        // dataPush.name = '';
+        // dataPush.password = '';
+        charge();
+        // campos.name = false;
+        // campos.pass = false;
+        // localStorage.user = data.name;
         // nuser.textContent = data.name;
         // document.querySelector('#user').textContent = 'Fer';
-        location.href = 'index.html'
+        // location.href = 'index.html'
     }else{
         toastE.classList.toggle('toast-close')
         console.log('algo fallo')
