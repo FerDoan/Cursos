@@ -675,6 +675,17 @@ section table .trAc th:nth-child(3){
     padding: 10px;
 }
 
+/* Ejercicios */
+.ejercicios{
+    padding: 20px;
+}
+.ejercicios li{
+    padding: 5px;
+    /* list-style: lower-alpha; */
+    list-style: none;
+    border:1px solid #000;
+}
+/* fin ejercicios */
 /* CONTENEDOR PRINCIPAL */
 @media screen  and (max-width:850px){
     /* SIDE BAR */
@@ -683,6 +694,7 @@ section table .trAc th:nth-child(3){
         /* display: none; */
         position: fixed;
         transition: all .5s;
+        z-index: 1;
     }
     
     .title{

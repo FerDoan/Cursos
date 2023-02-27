@@ -310,7 +310,7 @@ fAdd.addEventListener('submit',(e) => {
         setTimeout(() => {
             modalC.style.opacity = "0";
         modalC.style.visibility = "hidden";
-        },700)
+        },700);
         // console.log(dataPush)
         // campos.name = false;
         // campos.pass = false;
