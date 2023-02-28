@@ -686,6 +686,47 @@ section table .trAc th:nth-child(3){
     border:1px solid #000;
 }
 /* fin ejercicios */
+
+/* js you */
+.jsyou{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.jsyou .speach{
+    margin-top: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 8px;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+.jsyou input{
+    padding: 10px;
+    width: 50%;
+}
+
+.jsyou button{
+    padding: 10px;
+    width: 50px;
+}
+.jsyou .event button{
+    padding: 10px;
+    width: 100px;
+}
+
+
+/* fin js youtube */
 /* CONTENEDOR PRINCIPAL */
 @media screen  and (max-width:850px){
     /* SIDE BAR */

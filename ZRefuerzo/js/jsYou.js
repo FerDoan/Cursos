@@ -124,3 +124,45 @@ console.log(JSON.parse("[1,2,3]"))
 console.log(JSON.stringify({}))
 console.log(JSON.parse("[1,2,3]"))
 console.log(JSON.parse("[1,2,3]"))
+
+//spech hablar con texto
+
+
+
+const inpV = document.getElementById('inpV')
+const btnB = document.getElementById('btnB');
+var msj = '';
+
+const valorTarget = (e) =>{
+    msj = e.target.value
+    console.log(msj)
+}
+
+
+
+inpV.addEventListener('keyup', valorTarget);
+inpV.addEventListener('blur', valorTarget);
+
+btnB.addEventListener('click', (e) => {
+    e.preventDefault();
+    // let texto = msj;
+    console.log('valor',msj)
+    speechSynthesis.speak(new SpeechSynthesisUtterance(msj));
+
+})
+
+//data set
+
+const $linkDom = document.querySelector(".link-dom");
+console.log($linkDom.dataset.description);
+
+// otro tipo de manejar eventos
+
+function holaMundo(){
+    alert("Hola Mundo")
+    console.log(event)
+}
+
+const $eventoSemantico = document.getElementById("evento-semantico");
+
+$eventoSemantico.onclick = holaMundo;
