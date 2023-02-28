@@ -166,3 +166,23 @@ function holaMundo(){
 const $eventoSemantico = document.getElementById("evento-semantico");
 
 $eventoSemantico.onclick = holaMundo;
+
+// stopPropagacion y preventDefault
+const $divsEventos = document.querySelectorAll(".eventos-flujo div");
+
+function flujoEventos(e) {
+    console.log(
+        `Hola te saluda ${this.className}, el click lo origino ${e.target.className}`
+    );
+    e.stopPropagation();
+};
+
+console.log($divsEventos);
+
+$divsEventos.forEach((div) =>{
+    div.addEventListener('click',flujoEventos);
+})
+
+document.addEventListener('click',(e)=>{
+    console.log("Click en" , e.target);
+})
