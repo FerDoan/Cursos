@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="../lib/fontawesome-free-6.3.0-web/css/all.min.css"
+    />
+    <title>CRUD AJAX</title>
+  </head>
+  <body>
+    <div class="container" id="ctn">
+      <!-- <header> -->
+      <!-- <div class="logo">
+              <img src="" alt="">
+          </div> -->
+      <nav id="navBar" class="nav-bar side-barO">
+        <!-- <button id="btnSideC" class="btn-side">
+              <i class="fas fa-arrow-left"></i>
+            </button>
+            <button id="btnSideA" class="btn-side">
+              <i class="fas fa-arrow-right"></i>
+            </button> -->
+
+        <ul>
+          <li class="liO">
+            <div class="logo">
+              <img src="../img/logo.webp" alt="" />
+            </div>
+          </li>
+          <li class="liO">
+            <a href="#" id="adm"
+              ><span class="fas fa-screwdriver-wrench"></span>
+              <h4>Aministración</h4></a
+            >
+          </li>
+          <li class="liO">
+            <a href="stadistics.html" id="est"
+              ><span class="fas fa-bar-chart"></span>
+              <h4>Estadisticas</h4></a
+            >
+          </li>
+          <li class="liO">
+            <a href="JsYoutube.html"
+              ><span class="fas fa-solid fa-youtube"></span>
+              <h4>Curso js Youtube</h4></a
+            >
+          </li>
+          <li class="liO">
+            <a href="Ejercicios.html"
+              ><span class="fas fa-list-numeric"></span>
+              <h4>Ejercicios JS</h4></a
+            >
+          </li>
+          <li class="liO">
+            <a href="miniPagejs.html"
+              ><span class="fas fa-road-circle-exclamation"></span>
+              <h4>Pagina de curso Youtube</h4></a
+            >
+          </li>
+          <li class="liO">
+            <a href="#"
+              ><span class="fas fa-cube"></span>
+              <h4>CRUDS</h4></a
+            >
+          </li>
+          <li class="user liO">
+            <span class="fas fa-user-circle"></span>
+            <h4 id="user"></h4>
+            <div class="drop-content">
+              <a href="../view/login.html" id="logout">Logout</a>
+            </div>
+          </li>
+        </ul>
+        <div class="btn">
+          <button id="btnSideC" class="btn-side">
+            <i class="fas fa-square-caret-right"></i>
+          </button>
+          <!-- <button id="btnSideA" class="btn-side">
+            <i class="fas fa-arrow-right"></i>
+          </button> -->
+        </div>
+      </nav>
+      <main>
+        <div class="title">
+          <h5>EJEMPLOS CRUD</h5>
+        </div>
+        <div class="crud">
+          <h1>CRUD API REST AJAX</h1>
+          <section>
+            <article>
+              <h2 class="crud-title-ajax">Agregar Santo</h2>
+              <form action="" class="crud-form-ajax">
+                <input
+                  type="text"
+                  name="nombre"
+                  placeholder="nombre"
+                  required
+                />
+                <br />
+                <input
+                  type="text"
+                  name="constelacion"
+                  placeholder="constelacion"
+                  required
+                />
+                <br />
+                <input type="submit" value="enviar" />
+                <input type="hidden" name="idax"/>
+              </form>
+            </article>
+            <article>
+              <h2>Ver Santos</h2>
+              <table class="crud-table-ajax">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Constelación</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </article>
+          </section>
+        </div>
+          
+        <div class="crud">
+          <h1>CRUD API REST FETCH</h1>
+          <section>
+            <article>
+              <h2 class="crud-title-fetch">Agregar Santo</h2>
+              <form action="" class="crud-form-fetch">
+                <input
+                  type="text"
+                  name="nombre"
+                  placeholder="nombre"
+                  required
+                />
+                <br />
+                <input
+                  type="text"
+                  name="constelacion"
+                  placeholder="constelacion"
+                  required
+                />
+                <br />
+                <input type="submit" value="enviar" />
+                <input type="hidden" name="idf"/>
+              </form>
+            </article>
+            <article>
+              <h2>Ver Santos</h2>
+              <table class="crud-table-fetch">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Constelación</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </article>
+          </section>
+        </div>
+         
+        <div class="crud">
+          <h1>CRUD API REST AXIOS</h1>
+          <section>
+            <article>
+              <h2 class="crud-title-axios">Agregar Santo</h2>
+              <form action="" class="crud-form-axios">
+                <input
+                  type="text"
+                  name="nombre"
+                  placeholder="nombre"
+                  required
+                />
+                <br />
+                <input
+                  type="text"
+                  name="constelacion"
+                  placeholder="constelacion"
+                  required
+                />
+                <br />
+                <input type="submit" value="enviar" />
+                <input type="hidden" name="id"/>
+              </form>
+            </article>
+            <article>
+              <h2>Ver Santos</h2>
+              <table class="crud-table-axios">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Constelación</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </article>
+          </section>
+        </div>
+        <template id="crud-template">
+          <tr>
+            <td class="name"></td>
+            <td class="constellation"></td>
+            <td>
+              <button class="delete">Editar</button>
+              <button class="edit">Eliminar</button>
+            </td>
+          </tr>
+        </template>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/index.js" type="module"></script>
+    <!-- <script src="../js/crud-ajax.js"></script> -->
+    <!-- <script src="../js/crud-fetch.js"></script> -->
+    <script src="../js/crud-axios.js"></script>
+  </body>
+</html>

@@ -344,9 +344,21 @@ main {
 }
 section{
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
+}
+
+.jsyou .listas-api section{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    list-style:decimal;
+}
+
+.jsyou .listas-api li{
+    padding: 10px;
 }
 
 .title{
@@ -1015,7 +1027,32 @@ section table .trAc th:nth-child(3){
     color: #4d4d4d;
   }
 /* fin page yt */
+/* CRUDS JS youtube */
+.crud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+.crud article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+}
+.crud form input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    margin: 10px;
+    padding: 10px;
+}
+/* FIN CRUD */
 /* fin js youtube */
 /* CONTENEDOR PRINCIPAL */
 @media screen  and (max-width:850px){

@@ -75,6 +75,12 @@
               >
             </li>
             <li class="liO">
+              <a href="crud_ajax.html"
+                ><span class="fas fa-cube"></span>
+                <h4>CRUDS</h4></a
+              >
+            </li>
+            <li class="liO">
               <a href="#"
                 ><span class="fas fa-cart-shopping"></span>
                 <h4>Productos</h4></a
@@ -128,11 +134,48 @@
                          </div>
                     </div>
                 </section>
+                <div class="listas-api">
+                  <section>
+                    <div class="ajax" id="ajax">
+                      <h2>Objeto XmlHttpRequest</h2>
+                      <ol id="xhr"></ol>
+                    </div>
+                  </section>
+                  <section>
+                    <div class="fetch" id="fetch">
+                      <h2>Objeto Api FETCH</h2>
+                      <ol id="fetch"></ol>
+                    </div>
+                  </section>
+                  <section>
+                    <div class="fetch-async" id="fetch-async">
+                      <h2>Api FETCH-ASYNC-AWAIT</h2>
+                      <ol id="fetch-async"></ol>
+                    </div>
+                  </section>
+                  <section>
+                    <div class="axios" id="axios">
+                      <h2>Api AXIOS</h2>
+                      <ol id="axios"></ol>
+                    </div>
+                  </section>
+                  <section>
+                    <div class="axios-async" id="axios-async">
+                      <h2>Api AXIOS-ASYNC</h2>
+                      <ol id="axios-async"></ol>
+                    </div>
+                  </section>
+
+                </div>
             </div>
         </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script src="../js/index.js" type="module"></script>
     <script src="../js/jsYou.js"></script>
+    <script src="../js/ajax.js" ></script>
+    <script src="../js/fetch.js" ></script>
+    <script src="../js/axios.js" ></script>
 </body>
 </html>
