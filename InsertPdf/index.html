@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div>
+            <h1>EXPORT TABLE TO PDF</h1>
+            <img src="Banorte-logo.webp" alt="">
+
+        </div>
+        <form action="">
+            <h3>Fecha del alta</h3>
+            <div class="fdlinp">
+                <div class="inp">
+                    <label for="day">Dia</label>
+                    <input type="text" name="day" value="" id="day" placeholder="Ingrese dia del alta">                  
+                </div>
+                <div class="inp">
+                    <label for="month">Mes</label>
+                    <input type="text" name="month" value="" id="month" placeholder="Ingrese mes del alta">
+                </div>
+                <div class="inp">
+                    <label for="year">Año</label>
+                    <input type="text" name="year" value="" id="year" placeholder="Ingrese año del alta">
+                </div>
+            </div>
+
+            <button id="insert">Insertar</button>
+        </form>
+        
+        <div id="banorte" class="banorte">
+            <div class="cabecera">
+
+                <div>
+                    <img src="Banorte-logo.webp" alt="">
+                    <p>Banco Mercantil del Norte, S.A.<br>
+                        Institución de Banca Múltiple,<br>
+                        Grupo Financiero Banorte <br>
+                        R.F.C. BMN-930209-927 <br>
+                        Av. Revolución #3000 <br>
+                        Col. La Primavera C.P. 64830 <br>
+                        Monterrey, N.L. <br>
+                        www.banorte.com</p>
+                    </div>
+                    <div class="header"> 
+                        <h4 id="">Cuenta Enlace Digital</h4>
+                        <h4 id="name">Carátula de Activación</h4>
+                    </div>
+                </div>
+            <div>
+                <div class="tables">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="mc">Medio de Contratación</th>
+                                <th colspan="5" class="fdl">Fecha del Alta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3">Medio</td>
+                                <tr>
+                                    <td colspan="2" rowspan="1" class="day"></td>
+                                    <td colspan="2" rowspan="1" class="month"></td>
+                                    <td colspan="2" rowspan="1" class="year"></td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td colspan="2" rowspan="1">DIA</td>
+                                    <td colspan="2" rowspan="1">MES</td>
+                                    <td colspan="2" rowspan="1">AÑO</td>
+                                </tr>  
+                            </tr>
+                    </tbody>
+                </table>
+                <div class="subtitle">
+                    <h3>Datos del cliente</h3>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="nc">Nombre Completo</th>
+                        </tr>
+                    </thead>
+                </table>
+                
+            </div>
+                
+            </div>
+        </div>
+        <div>
+            <button id="pdfout">Create PDF</button>
+        </div>
+    </section>
+    <!--    Scripts -->
+<script src="jspdf.debug.js"></script>
+<script src="html2canvas.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

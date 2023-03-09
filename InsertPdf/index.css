@@ -1,0 +1,82 @@
+.tables h4{
+    
+}
+table{
+    border: 1px solid #000;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table tr{
+
+}
+
+table th, table td{
+    border: 1px solid #908989;
+    padding: 5px 10px;  
+}
+
+table th{
+    /* background-color: #000; */
+    /* color: #fff; */
+    font-weight: 600;
+    width: 300px;
+}
+
+.subtitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.cabecera{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.header{
+    position: absolute;
+    right: 150px;
+}
+
+.mc{
+    width: 400px;
+    text-transform: uppercase;
+}
+
+.fdl{
+    width: 200px;
+    text-transform: uppercase;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.fdlinp{
+    display: flex;
+    gap: 10px;
+    /* flex-direction: column; */
+}
+
+.inp{
+    display: flex;
+    flex-direction: column;
+}
+
+.inp input{
+    padding: 10px;
+    border: 1px solid #dbcdcd;
+    border-radius: 10px;
+}
+
+.nc{
+    width: 1000px;
+    text-transform: uppercase;
+}
